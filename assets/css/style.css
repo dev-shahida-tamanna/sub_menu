@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --brand-primary: #46a358;
+    --text-color: #3d3d3d;
+    --brand-gray: #727272;
+    --black: #000000;
+    --white: #fbfbfb;
+    --font-family: "League Spartan", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+iconify-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--text-color);
+    line-height: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.icon-set {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+/* CSS Common Code End */
+
+/* header part css start */
+
+header nav {
+    background-color: var(--white);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+header nav .row {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+header nav .navMenu ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+header nav .navMenu ul li  {
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+header nav .navMenu ul li:hover > .subMenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+header nav .navMenu ul li a {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 18px;
+    padding: 5px 15px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.35s ease-in-out;
+}
+
+header nav .navMenu > ul > li:hover > a {
+    font-weight: 500;
+    border-bottom: 2px solid var(--brand-primary);
+    color: var(--brand-primary);
+}
+
+
+header nav .navBtn  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav .navBtn a {
+    padding: 0 15px;
+    transition: all 0.35s ease-in-out;
+}
+
+header nav a:hover iconify-icon {
+    color: var(--brand-primary);
+}
+
+
+header nav .navMenu .subMenu {
+    position : absolute;
+    top: 95%;
+    left: 5%;
+    min-width: 180px;
+    display: block;
+    background-color: var(--white);
+    border: 1px solid var(--brand-gray);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.35s ease-in-out;
+    z-index: 10;
+}
+
+header nav .navMenu .subMenu .subMenu {
+    top: 20%;
+    left: 100%;
+}
+
+header nav .navMenu .subMenu li {
+    display: block;
+    padding: 5px 2px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.35s ease-in-out;
+}
+
+header nav .navMenu .subMenu li:hover {
+    border-bottom: 2px solid var(--brand-primary);
+}
+
+header nav .navMenu .subMenu li a,
+header nav .navMenu .subMenu li iconify-icon {
+    display: inline-flex;
+    align-items: center;
+    color: var(--brand-primary);
+    opacity: 0.7;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.35s ease-in-out;
+}
+
+header nav .navMenu .subMenu li:hover > a,
+header nav .navMenu .subMenu li a:hover > iconify-icon{
+    color: var(--brand-primary);
+    opacity: 1;
+}
+
+/* header part css end */
